@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-    <meta http-equiv="Pragma" content="no-cache" />
-    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <title>Content-Based Image Retrieval - Shobitha Bhaskar</title>
     <style>
         * {
@@ -14,29 +14,39 @@
             box-sizing: border-box;
         }
 
-        html, body {
-            width: 100%;
-            height: 100%;
-        }
-
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
             line-height: 1.6;
             color: #0f172a;
-            background-color: #f8fafc;
+            background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
             padding: 2rem;
             min-height: 100vh;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 20%, rgba(14, 165, 164, 0.03) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(3, 105, 161, 0.03) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
         }
 
         .container {
             position: relative;
             max-width: 900px;
             margin: 0 auto;
-            background-color: #ffffff;
+            background: rgba(248, 250, 252, 0.8);
+            backdrop-filter: blur(10px);
             padding: 3rem;
-            border-radius: 16px;
-            border: 1px solid #e2e8f0;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+            border: 1px solid rgba(14, 165, 164, 0.12);
+            box-shadow: 0 20px 50px rgba(14, 165, 164, 0.08);
         }
 
         .back-link {
@@ -45,7 +55,7 @@
             font-weight: 600;
             margin-bottom: 2rem;
             display: inline-block;
-            transition: color 0.3s ease;
+            transition: color 0.3s;
         }
 
         .back-link:hover {
@@ -55,8 +65,10 @@
         h1 {
             font-size: 2.5rem;
             margin-bottom: 2rem;
-            color: #0369a1;
-            font-weight: 700;
+            background: linear-gradient(135deg, #0ea5a4 0%, #0369a1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         h2 {
@@ -64,7 +76,6 @@
             margin-top: 2.5rem;
             margin-bottom: 1rem;
             font-size: 1.8rem;
-            font-weight: 600;
         }
 
         p {
@@ -80,10 +91,6 @@
             line-height: 1.8;
         }
 
-        li {
-            margin-bottom: 0.5rem;
-        }
-
         .tech-stack {
             display: flex;
             flex-wrap: wrap;
@@ -92,44 +99,37 @@
         }
 
         .tech-tag {
-            background-color: #e0f2f1;
+            background: rgba(14, 165, 164, 0.12);
             color: #0369a1;
             padding: 0.5rem 1rem;
             border-radius: 20px;
             font-size: 0.9rem;
-            border: 1px solid #80dedc;
-            font-weight: 500;
+            border: 1px solid rgba(14, 165, 164, 0.2);
         }
 
         .btn {
             display: inline-block;
             padding: 14px 32px;
-            background-color: #0369a1;
+            background: linear-gradient(135deg, #0ea5a4 0%, #0369a1 100%);
             color: white;
             text-decoration: none;
             border-radius: 8px;
             font-weight: 600;
-            transition: all 0.3s ease;
-            border: none;
+            transition: all 0.3s;
+            border: 1px solid rgba(3, 105, 161, 0.15);
+            box-shadow: 0 6px 18px rgba(3, 105, 161, 0.12);
             margin-top: 2rem;
-            cursor: pointer;
         }
 
         .btn:hover {
-            background-color: #0ea5a4;
             transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(3, 105, 161, 0.3);
+            box-shadow: 0 10px 25px rgba(3, 105, 161, 0.18);
         }
 
         .btn-secondary {
-            background-color: #e0f2f1;
+            background: rgba(3, 105, 161, 0.08);
             color: #0369a1;
-            border: 1px solid #80dedc;
-        }
-
-        .btn-secondary:hover {
-            background-color: #b2dfdb;
-            color: #0369a1;
+            border: 1px solid rgba(3, 105, 161, 0.12);
         }
 
         .button-group {
@@ -139,29 +139,11 @@
         }
 
         .highlight-box {
-            background-color: #e0f2f1;
+            background: rgba(14, 165, 164, 0.08);
             border-left: 4px solid #0369a1;
             padding: 1.5rem;
             margin: 2rem 0;
             border-radius: 8px;
-            color: #0f172a;
-        }
-
-        .highlight-box strong {
-            color: #0369a1;
-        }
-
-        strong {
-            color: #0369a1;
-            font-weight: 600;
-        }
-
-        a {
-            color: #0369a1;
-        }
-
-        a:hover {
-            color: #0ea5a4;
         }
     </style>
 </head>
@@ -169,94 +151,100 @@
     <div class="container">
         <a href="index.html" class="back-link">← Back to Portfolio</a>
         
-        <h1>🖼️ Content-Based Image Retrieval (CBIR)</h1>
+        <h1>🖼️ Content-Based Image Retrieval (CBIR) using Machine Learning</h1>
 
         <h2>Project Overview</h2>
-        <p>Developed a Content-Based Image Retrieval system using MATLAB and machine learning to retrieve images from a large database based on visual similarity. The system achieved 81% accuracy in image retrieval and was published in the International Research Journal of Engineering and Technology (IRJET).</p>
+        <p>Developed a comprehensive Content-Based Image Retrieval system using MATLAB and Machine Learning techniques. This system efficiently retrieves visually similar images from a large database based on feature extraction and similarity matching, without relying on manual metadata or tags.</p>
 
-        <h2>Objectives</h2>
+        <h2>Problem Statement</h2>
+        <p>Traditional image retrieval relies on manual annotation and keywords, which is:</p>
         <ul>
-            <li>Build an efficient image retrieval system without relying on text metadata</li>
-            <li>Extract visual features from images using computer vision techniques</li>
-            <li>Implement machine learning algorithms for image matching</li>
-            <li>Achieve high accuracy in retrieving relevant images</li>
-            <li>Create a scalable system for large image databases</li>
-            <li>Publish research findings in academic journals</li>
+            <li>Time-consuming and labor-intensive for large image databases</li>
+            <li>Subjective and prone to human inconsistency</li>
+            <li>Difficult to scale across thousands or millions of images</li>
+            <li>Unable to capture subtle visual similarities</li>
         </ul>
+        <p>A need existed for an intelligent system that could automatically understand and match images based on their visual content.</p>
 
-        <h2>Methodology</h2>
-        <p>I implemented a comprehensive CBIR pipeline using the Bag-of-Features approach with local image descriptors and machine learning classification:</p>
+        <h2>Solution</h2>
+        <p>I built a CBIR system that uses machine learning feature extraction and a bag-of-features approach to enable fast, accurate image retrieval based on visual similarity.</p>
         
         <div class="highlight-box">
-            <strong>Key Achievement:</strong> Achieved 81% retrieval accuracy on 10,000+ images using Bag-of-Features model with SIFT descriptors and SVM classifier.
+            <strong>Key Innovation:</strong> By combining color-based feature extraction with a bag-of-features model trained on the database, the system can instantly retrieve the top N most similar images from a dataset of 10,000+ images with 81% accuracy.
         </div>
 
-        <p><strong>Technical Approach:</strong></p>
+        <p><strong>How it works:</strong></p>
         <ul>
-            <li><strong>Feature Extraction:</strong> Used SIFT (Scale-Invariant Feature Transform) to detect local features</li>
-            <li><strong>Feature Representation:</strong> Created visual vocabulary using k-means clustering (Bag-of-Features)</li>
-            <li><strong>Image Representation:</strong> Represented each image as histogram of visual words</li>
-            <li><strong>Classification:</strong> Used Support Vector Machine (SVM) for image matching</li>
-            <li><strong>Similarity Computation:</strong> Calculated chi-square distance for image ranking</li>
-            <li><strong>Performance Optimization:</strong> Implemented indexing for fast retrieval</li>
+            <li><strong>Feature Extraction:</strong> Extracts color histograms and visual features from training images</li>
+            <li><strong>Bag-of-Features Model:</strong> Creates a codebook of visual words representing common patterns in the database</li>
+            <li><strong>Database Indexing:</strong> Builds an efficient search index for real-time queries</li>
+            <li><strong>Query Processing:</strong> Computes similarity between query image and database images</li>
+            <li><strong>Results Visualization:</strong> Displays top retrieved images with similarity scores using montage visualization</li>
         </ul>
 
-        <h2>Technologies & Tools</h2>
+        <h2>Technologies & Architecture</h2>
         <div class="tech-stack">
             <span class="tech-tag">MATLAB</span>
             <span class="tech-tag">Machine Learning</span>
             <span class="tech-tag">Computer Vision</span>
-            <span class="tech-tag">SIFT Features</span>
-            <span class="tech-tag">Support Vector Machine</span>
+            <span class="tech-tag">Image Processing</span>
+            <span class="tech-tag">Feature Extraction</span>
             <span class="tech-tag">Bag-of-Features</span>
+            <span class="tech-tag">C++</span>
         </div>
 
-        <h2>Key Deliverables</h2>
+        <p><strong>Architecture Highlights:</strong></p>
         <ul>
-            <li>Complete CBIR system with GUI interface</li>
-            <li>Feature extraction and visual vocabulary creation modules</li>
-            <li>Image matching and ranking algorithms</li>
-            <li>Database indexing for efficient retrieval</li>
-            <li>Performance evaluation metrics and analysis</li>
-            <li>Research paper published in IRJET (2022)</li>
-            <li>Complete source code and documentation</li>
+            <li><strong>Main_Toolbox.m:</strong> Interactive menu-driven interface for user interaction</li>
+            <li><strong>readDatabase.m:</strong> Loads and organizes image dataset with folder structure</li>
+            <li><strong>trainDataset.m:</strong> Extracts visual features and creates bag-of-features model</li>
+            <li><strong>selectQuery.m:</strong> Allows users to select query image interactively</li>
+            <li><strong>queryRetrival.m:</strong> Performs similarity search and retrieves top results</li>
+            <li><strong>databaseDisplay01.m:</strong> Visualizes retrieved images in a grid montage</li>
         </ul>
 
         <h2>Impact & Results</h2>
         <ul>
-            <li><strong>81% retrieval accuracy</strong> on diverse image database</li>
-            <li><strong>10,000+ images</strong> processed and indexed efficiently</li>
-            <li><strong>Sub-second retrieval time</strong> for most queries</li>
-            <li><strong>Research publication</strong> in peer-reviewed academic journal (IRJET 2022)</li>
-            <li><strong>Scalable architecture</strong> capable of handling larger databases</li>
-            <li><strong>Robust performance</strong> across different image categories</li>
+            <li><strong>81% accuracy</strong> in content-based image similarity matching</li>
+            <li><strong>10,000+ images</strong> processed efficiently in the database</li>
+            <li><strong>Sub-second retrieval</strong> for most queries using optimized indexing</li>
+            <li><strong>Scalable architecture</strong> capable of handling larger datasets</li>
+            <li><strong>Published research:</strong> A Survey on Content Based Image Retrieval Using Machine Learning (IRJET, 2022)</li>
         </ul>
 
-        <h2>Technical Specifications</h2>
+        <h2>Technical Challenges Solved</h2>
         <ul>
-            <li><strong>SIFT Parameters:</strong> Detection at multiple scales and orientations</li>
-            <li><strong>Vocabulary Size:</strong> 500 visual words (k-means clusters)</li>
-            <li><strong>Classifier:</strong> One-vs-All SVM with RBF kernel</li>
-            <li><strong>Distance Metric:</strong> Chi-square distance for histogram comparison</li>
-            <li><strong>Database:</strong> 10,000+ images across 10 categories</li>
-            <li><strong>Retrieval Time:</strong> Average < 1 second per query</li>
+            <li>Efficient feature extraction from high-resolution images</li>
+            <li>Building compact and effective visual vocabulary</li>
+            <li>Optimizing search performance for real-time retrieval</li>
+            <li>Handling diverse image categories and lighting conditions</li>
+            <li>Implementing effective similarity metrics for ranking</li>
         </ul>
 
-        <h2>Future Enhancements</h2>
+        <h2>Key Learnings</h2>
         <ul>
-            <li>Integration of deep learning features (CNN-based)</li>
-            <li>Web-based interface for broader accessibility</li>
-            <li>Real-time retrieval on mobile devices</li>
-            <li>Semantic search capabilities</li>
-            <li>Support for sketch-based image retrieval</li>
+            <li>Practical applications of machine learning in computer vision</li>
+            <li>Feature engineering and dimensionality reduction techniques</li>
+            <li>Building scalable systems for large-scale data processing</li>
+            <li>User-friendly interface design for interactive applications</li>
         </ul>
-
-        <h2>GitHub Repository</h2>
-        <p>Source code and documentation available at: <a href="https://github.com/shobithabhaskar18/CBIR-using-ML" target="_blank">https://github.com/shobithabhaskar18/CBIR-using-ML</a></p>
 
         <div class="button-group">
+            <a href="https://github.com/shobithabhaskar18/CBIR-using-ML" target="_blank" class="btn">View Project on GitHub →</a>
             <a href="index.html#projects" class="btn btn-secondary">Back to Projects</a>
         </div>
     </div>
+
+    <script>
+        // Add smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
