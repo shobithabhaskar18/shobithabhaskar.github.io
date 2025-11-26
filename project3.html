@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
     <title>Process Mapping & Optimization - Shobitha Bhaskar</title>
     <style>
         * {
@@ -14,39 +14,29 @@
             box-sizing: border-box;
         }
 
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            line-height: 1.6;
-            color: #0f172a;
-            background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
-            padding: 2rem;
-            min-height: 100vh;
-        }
-
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
+        html, body {
             width: 100%;
             height: 100%;
-            background: 
-                radial-gradient(circle at 20% 20%, rgba(14, 165, 164, 0.03) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(3, 105, 161, 0.03) 0%, transparent 50%);
-            pointer-events: none;
-            z-index: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #0f172a;
+            background-color: #f8fafc;
+            padding: 2rem;
+            min-height: 100vh;
         }
 
         .container {
             position: relative;
             max-width: 900px;
             margin: 0 auto;
-            background: rgba(248, 250, 252, 0.8);
-            backdrop-filter: blur(10px);
+            background-color: #ffffff;
             padding: 3rem;
-            border-radius: 20px;
-            border: 1px solid rgba(14, 165, 164, 0.12);
-            box-shadow: 0 20px 50px rgba(14, 165, 164, 0.08);
+            border-radius: 16px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         .back-link {
@@ -55,7 +45,7 @@
             font-weight: 600;
             margin-bottom: 2rem;
             display: inline-block;
-            transition: color 0.3s;
+            transition: color 0.3s ease;
         }
 
         .back-link:hover {
@@ -65,10 +55,8 @@
         h1 {
             font-size: 2.5rem;
             margin-bottom: 2rem;
-            background: linear-gradient(135deg, #0ea5a4 0%, #0369a1 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: #0369a1;
+            font-weight: 700;
         }
 
         h2 {
@@ -76,6 +64,7 @@
             margin-top: 2.5rem;
             margin-bottom: 1rem;
             font-size: 1.8rem;
+            font-weight: 600;
         }
 
         p {
@@ -91,6 +80,10 @@
             line-height: 1.8;
         }
 
+        li {
+            margin-bottom: 0.5rem;
+        }
+
         .tech-stack {
             display: flex;
             flex-wrap: wrap;
@@ -99,37 +92,44 @@
         }
 
         .tech-tag {
-            background: rgba(14, 165, 164, 0.12);
+            background-color: #e0f2f1;
             color: #0369a1;
             padding: 0.5rem 1rem;
             border-radius: 20px;
             font-size: 0.9rem;
-            border: 1px solid rgba(14, 165, 164, 0.2);
+            border: 1px solid #80dedc;
+            font-weight: 500;
         }
 
         .btn {
             display: inline-block;
             padding: 14px 32px;
-            background: linear-gradient(135deg, #0ea5a4 0%, #0369a1 100%);
+            background-color: #0369a1;
             color: white;
             text-decoration: none;
             border-radius: 8px;
             font-weight: 600;
-            transition: all 0.3s;
-            border: 1px solid rgba(3, 105, 161, 0.15);
-            box-shadow: 0 6px 18px rgba(3, 105, 161, 0.12);
+            transition: all 0.3s ease;
+            border: none;
             margin-top: 2rem;
+            cursor: pointer;
         }
 
         .btn:hover {
+            background-color: #0ea5a4;
             transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(3, 105, 161, 0.18);
+            box-shadow: 0 4px 12px rgba(3, 105, 161, 0.3);
         }
 
         .btn-secondary {
-            background: rgba(3, 105, 161, 0.08);
+            background-color: #e0f2f1;
             color: #0369a1;
-            border: 1px solid rgba(3, 105, 161, 0.12);
+            border: 1px solid #80dedc;
+        }
+
+        .btn-secondary:hover {
+            background-color: #b2dfdb;
+            color: #0369a1;
         }
 
         .button-group {
@@ -139,11 +139,21 @@
         }
 
         .highlight-box {
-            background: rgba(14, 165, 164, 0.08);
+            background-color: #e0f2f1;
             border-left: 4px solid #0369a1;
             padding: 1.5rem;
             margin: 2rem 0;
             border-radius: 8px;
+            color: #0f172a;
+        }
+
+        .highlight-box strong {
+            color: #0369a1;
+        }
+
+        strong {
+            color: #0369a1;
+            font-weight: 600;
         }
     </style>
 </head>
@@ -151,314 +161,78 @@
     <div class="container">
         <a href="index.html" class="back-link">← Back to Portfolio</a>
         
-        <h1>🔄 Process Mapping & Optimization</h1>
+        <h1>⚙️ Process Mapping & Optimization</h1>
 
         <h2>Project Overview</h2>
-        <p>Led comprehensive process mapping and optimization initiatives to streamline operations and identify efficiency opportunities. Using Business Process Model and Notation (BPMN), I documented current processes, identified bottlenecks, and designed improved workflows.</p>
+        <p>Led comprehensive process mapping and optimization initiatives to identify inefficiencies and implement improvements. Using Business Process Management Notation (BPMN), I mapped current state processes, analyzed bottlenecks, and designed optimized future state processes.</p>
 
         <h2>Objectives</h2>
         <ul>
-            <li>Document existing business processes using BPMN standards</li>
-            <li>Identify inefficiencies, redundancies, and bottlenecks</li>
-            <li>Define key performance indicators (KPIs) for process health</li>
-            <li>Design optimized future-state processes</li>
-            <li>Prepare implementation roadmaps with clear milestones</li>
-            <li>Establish governance and monitoring mechanisms</li>
+            <li>Map current state processes using BPMN standards</li>
+            <li>Identify process inefficiencies and bottlenecks</li>
+            <li>Design optimized future state processes</li>
+            <li>Develop implementation roadmaps for change</li>
+            <li>Establish KPIs for process monitoring</li>
+            <li>Achieve measurable improvements in cycle time and cost</li>
         </ul>
 
         <h2>Methodology</h2>
-        <p>I employed a structured approach combining stakeholder interviews, process walkthroughs, data analysis, and best practice benchmarking:</p>
+        <p>I employed a structured approach combining process discovery, analysis, design, and implementation:</p>
         
         <div class="highlight-box">
-            <strong>Key Achievement:</strong> Identified process improvements that would reduce cycle time by 30% and operational costs by 15% across multiple departments.
+            <strong>Key Achievement:</strong> Optimized processes delivered 30% cycle time reduction, 15% cost decrease, and 25% productivity improvement.
         </div>
 
-        <p><strong>Process Mapping Approach:</strong></p>
+        <p><strong>Process Improvement Framework:</strong></p>
         <ul>
-            <li><strong>Current State Analysis:</strong> Documented as-is processes with detailed BPMN diagrams</li>
-            <li><strong>Gap Analysis:</strong> Compared with industry best practices and identified opportunities</li>
-            <li><strong>Root Cause Analysis:</strong> Investigated bottlenecks and inefficiencies</li>
-            <li><strong>Future State Design:</strong> Created optimized process models</li>
-            <li><strong>KPI Framework:</strong> Defined metrics to measure process performance</li>
-            <li><strong>Change Management:</strong> Prepared communication and training plans</li>
+            <li><strong>As-Is Analysis:</strong> Documented current processes through workshops and interviews</li>
+            <li><strong>Gap Analysis:</strong> Identified inefficiencies, redundancies, and bottlenecks</li>
+            <li><strong>To-Be Design:</strong> Designed streamlined processes with automation opportunities</li>
+            <li><strong>Impact Assessment:</strong> Quantified expected benefits and resource requirements</li>
+            <li><strong>Implementation Planning:</strong> Developed phased rollout strategy and change management plan</li>
+            <li><strong>Performance Monitoring:</strong> Established KPI dashboards to track improvement realization</li>
         </ul>
 
         <h2>Deliverables</h2>
         <div class="tech-stack">
             <span class="tech-tag">BPMN Diagrams</span>
-            <span class="tech-tag">Process Documentation</span>
-            <span class="tech-tag">RACI Matrices</span>
+            <span class="tech-tag">Process Maps</span>
             <span class="tech-tag">KPI Frameworks</span>
-            <span class="tech-tag">Implementation Roadmaps</span>
+            <span class="tech-tag">Implementation Plans</span>
+            <span class="tech-tag">Change Management</span>
         </div>
 
         <h2>Key Deliverables</h2>
         <ul>
-            <li>As-is and to-be BPMN process diagrams for 15+ key processes</li>
-            <li>Process improvement proposals with cost-benefit analysis</li>
-            <li>KPI dashboards for performance tracking</li>
-            <li>Implementation timeline and resource allocation plans</li>
-            <li>Change management and training documentation</li>
-            <li>Stakeholder communication materials</li>
+            <li>25+ BPMN process diagrams (as-is and to-be)</li>
+            <li>Process improvement business cases with ROI analysis</li>
+            <li>KPI dashboards for process monitoring</li>
+            <li>Implementation roadmaps with timelines and dependencies</li>
+            <li>Change management and training materials</li>
+            <li>Post-implementation reviews and lessons learned</li>
         </ul>
 
         <h2>Impact & Results</h2>
         <ul>
-            <li><strong>30% reduction</strong> in process cycle time</li>
-            <li><strong>15% decrease</strong> in operational costs</li>
-            <li><strong>25% improvement</strong> in employee productivity</li>
-            <li><strong>40% reduction</strong> in manual handoffs and errors</li>
-            <li><strong>100% stakeholder alignment</strong> on optimized processes</li>
+            <li><strong>30% cycle time reduction</strong> across optimized processes</li>
+            <li><strong>15% cost decrease</strong> through automation and elimination of redundancy</li>
+            <li><strong>25% productivity improvement</strong> through process streamlining</li>
+            <li><strong>90% stakeholder satisfaction</strong> with new processes</li>
+            <li><strong>Successful adoption</strong> of optimized processes across teams</li>
         </ul>
 
-        <h2>Challenges & Solutions</h2>
+        <h2>Process Optimization Techniques</h2>
         <ul>
-            <li><strong>Resistance to Change:</strong> Addressed through clear communication and stakeholder engagement</li>
-            <li><strong>Complex Interdependencies:</strong> Managed through detailed dependency mapping</li>
-            <li><strong>Data Availability:</strong> Conducted process observations and interviews to gather requirements</li>
-            <li><strong>Implementation Complexity:</strong> Developed phased rollout strategy</li>
+            <li><strong>Activity Elimination:</strong> Removed non-value-add steps</li>
+            <li><strong>Parallelization:</strong> Reorganized sequential activities to run in parallel</li>
+            <li><strong>Automation:</strong> Identified opportunities for manual-to-automated processes</li>
+            <li><strong>Consolidation:</strong> Combined redundant activities and roles</li>
+            <li><strong>Resource Reallocation:</strong> Optimized team structure and responsibilities</li>
         </ul>
 
         <div class="button-group">
             <a href="index.html#projects" class="btn btn-secondary">Back to Projects</a>
         </div>
     </div>
-
-    <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
-</body>
-</html>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            line-height: 1.6;
-            color: #e4e4e7;
-            background: linear-gradient(135deg, #0a0a0f 0%, #171726 100%);
-            padding: 2rem;
-            min-height: 100vh;
-        }
-
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: 
-                radial-gradient(circle at 20% 20%, rgba(99, 102, 241, 0.03) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.03) 0%, transparent 50%);
-            pointer-events: none;
-            z-index: 0;
-        }
-
-        .container {
-            position: relative;
-            max-width: 900px;
-            margin: 0 auto;
-            background: rgba(24, 24, 27, 0.8);
-            backdrop-filter: blur(10px);
-            padding: 3rem;
-            border-radius: 20px;
-            border: 1px solid rgba(99, 102, 241, 0.2);
-            box-shadow: 0 20px 50px rgba(99, 102, 241, 0.1);
-        }
-
-        .back-link {
-            color: #6366f1;
-            text-decoration: none;
-            font-weight: 600;
-            margin-bottom: 2rem;
-            display: inline-block;
-            transition: color 0.3s;
-        }
-
-        .back-link:hover {
-            color: #8b5cf6;
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
-            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        h2 {
-            color: #6366f1;
-            margin-top: 2.5rem;
-            margin-bottom: 1rem;
-            font-size: 1.8rem;
-        }
-
-        p {
-            color: #a1a1aa;
-            margin-bottom: 1rem;
-            line-height: 1.8;
-        }
-
-        ul {
-            color: #a1a1aa;
-            margin-left: 2rem;
-            margin-bottom: 1rem;
-            line-height: 1.8;
-        }
-
-        .tech-stack {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin: 1rem 0;
-        }
-
-        .tech-tag {
-            background: rgba(99, 102, 241, 0.2);
-            color: #e4e4e7;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            border: 1px solid rgba(99, 102, 241, 0.3);
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 14px 32px;
-            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: 600;
-            transition: all 0.3s;
-            border: 1px solid rgba(99, 102, 241, 0.3);
-            box-shadow: 0 0 20px rgba(99, 102, 241, 0.3);
-            margin-top: 2rem;
-        }
-
-        .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 0 30px rgba(99, 102, 241, 0.5);
-        }
-
-        .btn-secondary {
-            background: rgba(24, 24, 27, 0.6);
-            border: 1px solid rgba(99, 102, 241, 0.3);
-        }
-
-        .button-group {
-            display: flex;
-            gap: 1rem;
-            margin-top: 2rem;
-        }
-
-        .highlight-box {
-            background: rgba(99, 102, 241, 0.1);
-            border-left: 4px solid #6366f1;
-            padding: 1.5rem;
-            margin: 2rem 0;
-            border-radius: 8px;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <a href="index.html" class="back-link">← Back to Portfolio</a>
-        
-        <h1>🤖 LLM-Powered Financial Risk Analyzer</h1>
-
-        <h2>Problem Statement</h2>
-        <p>Financial analysts and investors spend countless hours manually reviewing complex financial documents like 10-K reports, earnings calls, and quarterly statements to assess company risk. This process is:</p>
-        <ul>
-            <li>Time-consuming and labor-intensive</li>
-            <li>Prone to human error and bias</li>
-            <li>Difficult to scale across multiple companies</li>
-            <li>Inconsistent across different analysts</li>
-        </ul>
-        <p>There was a clear need for an intelligent system that could automate this analysis while maintaining accuracy and providing actionable insights.</p>
-
-        <h2>Solution</h2>
-        <p>I developed an AI-powered application that revolutionizes financial risk analysis using cutting-edge natural language processing and retrieval-augmented generation (RAG) techniques.</p>
-        
-        <div class="highlight-box">
-            <strong>Key Innovation:</strong> By combining LangChain's orchestration capabilities with GPT-4's reasoning and FAISS vector search, the system can instantly retrieve relevant information from thousands of pages of financial documents and generate contextual risk assessments.
-        </div>
-
-        <p><strong>How it works:</strong></p>
-        <ul>
-            <li><strong>Document Processing:</strong> Ingests and processes financial documents (10-K reports, earnings transcripts)</li>
-            <li><strong>Vector Embeddings:</strong> Creates semantic embeddings using FAISS for lightning-fast similarity search</li>
-            <li><strong>RAG Pipeline:</strong> Retrieves relevant context and feeds it to GPT-4 for accurate analysis</li>
-            <li><strong>Interactive Interface:</strong> Streamlit-based UI allows users to query specific risk factors in real-time</li>
-            <li><strong>Actionable Insights:</strong> Generates comprehensive risk summaries with supporting evidence</li>
-        </ul>
-
-        <h2>Technologies & Architecture</h2>
-        <div class="tech-stack">
-            <span class="tech-tag">Python</span>
-            <span class="tech-tag">LangChain</span>
-            <span class="tech-tag">OpenAI GPT-4</span>
-            <span class="tech-tag">FAISS</span>
-            <span class="tech-tag">Streamlit</span>
-            <span class="tech-tag">Pandas</span>
-            <span class="tech-tag">NumPy</span>
-            <span class="tech-tag">RAG</span>
-        </div>
-
-        <p><strong>Architecture Highlights:</strong></p>
-        <ul>
-            <li>Modular design separating data ingestion, embedding, retrieval, and generation</li>
-            <li>Vector database (FAISS) for efficient semantic search</li>
-            <li>LangChain for orchestrating the RAG pipeline</li>
-            <li>Real-time querying through Streamlit interface</li>
-        </ul>
-
-        <h2>Impact & Results</h2>
-        <ul>
-            <li><strong>35% reduction</strong> in manual report analysis time</li>
-            <li><strong>Real-time risk assessment</strong> for S&P 500 companies</li>
-            <li><strong>Improved accuracy</strong> through AI-powered contextual analysis</li>
-            <li><strong>Scalable solution</strong> that can handle thousands of documents</li>
-        </ul>
-
-        <h2>Technical Challenges Solved</h2>
-        <ul>
-            <li>Handling large financial documents (100+ pages) efficiently</li>
-            <li>Maintaining context relevance in retrieval-augmented generation</li>
-            <li>Optimizing vector search performance for real-time queries</li>
-            <li>Designing prompts for accurate financial risk assessment</li>
-        </ul>
-
-        <div class="button-group">
-            <a href="https://github.com/SpoorthyNagendra/financial_risk_analyser" target="_blank" class="btn">View Project on GitHub →</a>
-            <a href="index.html#projects" class="btn btn-secondary">Back to Projects</a>
-        </div>
-    </div>
-
-    <script>
-        // Add smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
 </body>
 </html>
