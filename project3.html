@@ -3,7 +3,236 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Financial Risk Analyzer - Spoorthy Nagendra</title>
+    <title>Process Mapping & Optimization - Shobitha Bhaskar</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: #0f172a;
+            background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+            padding: 2rem;
+            min-height: 100vh;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 20%, rgba(14, 165, 164, 0.03) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(3, 105, 161, 0.03) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .container {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+            background: rgba(248, 250, 252, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 3rem;
+            border-radius: 20px;
+            border: 1px solid rgba(14, 165, 164, 0.12);
+            box-shadow: 0 20px 50px rgba(14, 165, 164, 0.08);
+        }
+
+        .back-link {
+            color: #0369a1;
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            display: inline-block;
+            transition: color 0.3s;
+        }
+
+        .back-link:hover {
+            color: #0ea5a4;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            background: linear-gradient(135deg, #0ea5a4 0%, #0369a1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        h2 {
+            color: #0369a1;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        p {
+            color: #475569;
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        ul {
+            color: #475569;
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+
+        .tech-tag {
+            background: rgba(14, 165, 164, 0.12);
+            color: #0369a1;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            border: 1px solid rgba(14, 165, 164, 0.2);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            background: linear-gradient(135deg, #0ea5a4 0%, #0369a1 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: 1px solid rgba(3, 105, 161, 0.15);
+            box-shadow: 0 6px 18px rgba(3, 105, 161, 0.12);
+            margin-top: 2rem;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(3, 105, 161, 0.18);
+        }
+
+        .btn-secondary {
+            background: rgba(3, 105, 161, 0.08);
+            color: #0369a1;
+            border: 1px solid rgba(3, 105, 161, 0.12);
+        }
+
+        .button-group {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .highlight-box {
+            background: rgba(14, 165, 164, 0.08);
+            border-left: 4px solid #0369a1;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link">← Back to Portfolio</a>
+        
+        <h1>🔄 Process Mapping & Optimization</h1>
+
+        <h2>Project Overview</h2>
+        <p>Led comprehensive process mapping and optimization initiatives to streamline operations and identify efficiency opportunities. Using Business Process Model and Notation (BPMN), I documented current processes, identified bottlenecks, and designed improved workflows.</p>
+
+        <h2>Objectives</h2>
+        <ul>
+            <li>Document existing business processes using BPMN standards</li>
+            <li>Identify inefficiencies, redundancies, and bottlenecks</li>
+            <li>Define key performance indicators (KPIs) for process health</li>
+            <li>Design optimized future-state processes</li>
+            <li>Prepare implementation roadmaps with clear milestones</li>
+            <li>Establish governance and monitoring mechanisms</li>
+        </ul>
+
+        <h2>Methodology</h2>
+        <p>I employed a structured approach combining stakeholder interviews, process walkthroughs, data analysis, and best practice benchmarking:</p>
+        
+        <div class="highlight-box">
+            <strong>Key Achievement:</strong> Identified process improvements that would reduce cycle time by 30% and operational costs by 15% across multiple departments.
+        </div>
+
+        <p><strong>Process Mapping Approach:</strong></p>
+        <ul>
+            <li><strong>Current State Analysis:</strong> Documented as-is processes with detailed BPMN diagrams</li>
+            <li><strong>Gap Analysis:</strong> Compared with industry best practices and identified opportunities</li>
+            <li><strong>Root Cause Analysis:</strong> Investigated bottlenecks and inefficiencies</li>
+            <li><strong>Future State Design:</strong> Created optimized process models</li>
+            <li><strong>KPI Framework:</strong> Defined metrics to measure process performance</li>
+            <li><strong>Change Management:</strong> Prepared communication and training plans</li>
+        </ul>
+
+        <h2>Deliverables</h2>
+        <div class="tech-stack">
+            <span class="tech-tag">BPMN Diagrams</span>
+            <span class="tech-tag">Process Documentation</span>
+            <span class="tech-tag">RACI Matrices</span>
+            <span class="tech-tag">KPI Frameworks</span>
+            <span class="tech-tag">Implementation Roadmaps</span>
+        </div>
+
+        <h2>Key Deliverables</h2>
+        <ul>
+            <li>As-is and to-be BPMN process diagrams for 15+ key processes</li>
+            <li>Process improvement proposals with cost-benefit analysis</li>
+            <li>KPI dashboards for performance tracking</li>
+            <li>Implementation timeline and resource allocation plans</li>
+            <li>Change management and training documentation</li>
+            <li>Stakeholder communication materials</li>
+        </ul>
+
+        <h2>Impact & Results</h2>
+        <ul>
+            <li><strong>30% reduction</strong> in process cycle time</li>
+            <li><strong>15% decrease</strong> in operational costs</li>
+            <li><strong>25% improvement</strong> in employee productivity</li>
+            <li><strong>40% reduction</strong> in manual handoffs and errors</li>
+            <li><strong>100% stakeholder alignment</strong> on optimized processes</li>
+        </ul>
+
+        <h2>Challenges & Solutions</h2>
+        <ul>
+            <li><strong>Resistance to Change:</strong> Addressed through clear communication and stakeholder engagement</li>
+            <li><strong>Complex Interdependencies:</strong> Managed through detailed dependency mapping</li>
+            <li><strong>Data Availability:</strong> Conducted process observations and interviews to gather requirements</li>
+            <li><strong>Implementation Complexity:</strong> Developed phased rollout strategy</li>
+        </ul>
+
+        <div class="button-group">
+            <a href="index.html#projects" class="btn btn-secondary">Back to Projects</a>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
     <style>
         * {
             margin: 0;

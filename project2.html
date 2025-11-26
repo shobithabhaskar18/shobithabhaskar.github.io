@@ -3,7 +3,235 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Financial Risk Analyzer - Spoorthy Nagendra</title>
+    <title>Data Analysis & Reporting - Shobitha Bhaskar</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: #0f172a;
+            background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+            padding: 2rem;
+            min-height: 100vh;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 20%, rgba(14, 165, 164, 0.03) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(3, 105, 161, 0.03) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .container {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+            background: rgba(248, 250, 252, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 3rem;
+            border-radius: 20px;
+            border: 1px solid rgba(14, 165, 164, 0.12);
+            box-shadow: 0 20px 50px rgba(14, 165, 164, 0.08);
+        }
+
+        .back-link {
+            color: #0369a1;
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            display: inline-block;
+            transition: color 0.3s;
+        }
+
+        .back-link:hover {
+            color: #0ea5a4;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            background: linear-gradient(135deg, #0ea5a4 0%, #0369a1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        h2 {
+            color: #0369a1;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        p {
+            color: #475569;
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        ul {
+            color: #475569;
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+
+        .tech-tag {
+            background: rgba(14, 165, 164, 0.12);
+            color: #0369a1;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            border: 1px solid rgba(14, 165, 164, 0.2);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            background: linear-gradient(135deg, #0ea5a4 0%, #0369a1 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: 1px solid rgba(3, 105, 161, 0.15);
+            box-shadow: 0 6px 18px rgba(3, 105, 161, 0.12);
+            margin-top: 2rem;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(3, 105, 161, 0.18);
+        }
+
+        .btn-secondary {
+            background: rgba(3, 105, 161, 0.08);
+            color: #0369a1;
+            border: 1px solid rgba(3, 105, 161, 0.12);
+        }
+
+        .button-group {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .highlight-box {
+            background: rgba(14, 165, 164, 0.08);
+            border-left: 4px solid #0369a1;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link">← Back to Portfolio</a>
+        
+        <h1>📊 Data Analysis & Reporting</h1>
+
+        <h2>Project Overview</h2>
+        <p>Designed and built comprehensive data analysis dashboards and automated reporting systems to transform raw business data into actionable insights. This project focused on extracting, transforming, and visualizing data to support data-driven decision-making.</p>
+
+        <h2>Objectives</h2>
+        <ul>
+            <li>Extract and consolidate data from multiple sources using SQL</li>
+            <li>Create interactive dashboards for real-time business monitoring</li>
+            <li>Automate routine reporting processes to save time and reduce errors</li>
+            <li>Present key performance indicators (KPIs) in a clear, visual format</li>
+            <li>Enable stakeholders to explore data and discover insights independently</li>
+        </ul>
+
+        <h2>Solution</h2>
+        <p>I developed a comprehensive data analytics solution that combines SQL-based data extraction, Excel-based data processing, and Tableau visualizations to create dynamic dashboards and automated reports.</p>
+        
+        <div class="highlight-box">
+            <strong>Key Achievement:</strong> Built dashboards that reduced manual reporting time by 40% while providing greater analytical depth and real-time data visibility.
+        </div>
+
+        <p><strong>Approach:</strong></p>
+        <ul>
+            <li><strong>Data Extraction:</strong> SQL queries to extract relevant data from enterprise databases</li>
+            <li><strong>Data Processing:</strong> Excel-based transformations and calculations using Power Query</li>
+            <li><strong>Dashboard Design:</strong> Interactive Tableau visualizations with drill-down capabilities</li>
+            <li><strong>KPI Tracking:</strong> Real-time monitoring of critical business metrics</li>
+            <li><strong>Report Automation:</strong> Scheduled report generation and distribution</li>
+        </ul>
+
+        <h2>Technologies & Tools</h2>
+        <div class="tech-stack">
+            <span class="tech-tag">Tableau</span>
+            <span class="tech-tag">SQL</span>
+            <span class="tech-tag">Excel</span>
+            <span class="tech-tag">Power Query</span>
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Data Visualization</span>
+        </div>
+
+        <h2>Key Deliverables</h2>
+        <ul>
+            <li>5+ interactive dashboards for different business functions</li>
+            <li>Automated weekly and monthly report generation</li>
+            <li>Real-time KPI tracking system</li>
+            <li>Data dictionary and documentation for stakeholders</li>
+            <li>Training materials for end-users</li>
+        </ul>
+
+        <h2>Impact & Results</h2>
+        <ul>
+            <li><strong>40% reduction</strong> in manual reporting time</li>
+            <li><strong>Real-time insights</strong> replacing weekly batch reports</li>
+            <li><strong>95% data accuracy</strong> through automated validation</li>
+            <li><strong>Improved decision-making</strong> with accessible analytics</li>
+            <li><strong>Stakeholder adoption</strong> of 100+ daily active users</li>
+        </ul>
+
+        <h2>Challenges Addressed</h2>
+        <ul>
+            <li>Data quality issues and missing values</li>
+            <li>Complex business logic and calculations</li>
+            <li>Performance optimization for large datasets</li>
+            <li>User accessibility and self-service analytics</li>
+            <li>Maintaining data security and compliance</li>
+        </ul>
+
+        <div class="button-group">
+            <a href="index.html#projects" class="btn btn-secondary">Back to Projects</a>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
     <style>
         * {
             margin: 0;
